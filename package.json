@@ -1,0 +1,25 @@
+{
+  "name": "s3_acl_audit_fix",
+  "version": "1.0.0",
+  "description": "This script scans for aws s3 buckets and finds buckets configured with public read. It then takes corrective acction to remove public read. This script should only be used where in aws accounts where public s3 access is forbidden. Where public access is allwoed this script can cause an outage. There is no logic to differentiate beteen what buckets are approved to be public and which are not. ",
+  "main": "S3-ACL-NODE-JSv2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "S3",
+    "Public",
+    "Access",
+    "Lambda",
+    "Security",
+    "Incident",
+    "Response"
+  ],
+  "author": "Ricky L. Sanders",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.86.0",
+    "node-cron": "^1.2.0"
+  }
+}
