@@ -1,3 +1,6 @@
+WORK IN PROGRESS. This script only changes the bucket permissions.Object permisisons and bucket policies are what need to be addresssed to mitigate data leakage/ downloads. I'm currently working on this. 
+
+
 # S3 Public READ Audit and Incident Response 
 
 This script scans for aws s3 buckets and finds buckets configured with public read. It then takes corrective action to remove public read. This script should only be used when in aws accounts where public s3 access is strictly forbidden. Where public access is allowed this script will cause an outage. There is no logic to differentiate between what buckets are approved to be public and which are not. Therefore it is only okay to run this script when in a internal account only where you would never expect to see public access. Otherwise you could modify the code to describe S3 tags and use a data classification tag to invoke a response. Enjoy
