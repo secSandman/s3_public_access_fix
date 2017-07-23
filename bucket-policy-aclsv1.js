@@ -60,7 +60,7 @@ s3 = new AWS.S3({apiVersion: '2006-03-01'});
                                     
                                     var params = {
                                           Bucket: buckName, 
-                                          Policy: "{\"Version\": \"2012-10-17\", \"Statement\": [{ \"Sid\": \"id-1\",\"Effect\": \"Deny\",\"Principal\": {\"AWS\": \"arn:aws:iam::162723788887:root\"}, \"Action\": [ \"*\"], \"Resource\": [\"arn:aws:s3:::secsandman-secret\" ] } ]}"
+                                          Policy: "{\"Version\": \"2012-10-17\", \"Statement\": [{ \"Sid\": \"id-1\",\"Effect\": \"Deny\",\"Principal\": {\"AWS\": \"arn:aws:iam::<account id>:<user or object=to owner>\"}, \"Action\": [ \"*\"], \"Resource\": [\"arn:aws:s3:::< your bucket>\" ] } ]}"
                                          };
                                          s3.putBucketPolicy(params, function(err, data) {
                                            if (err) console.log(err, err.stack); // an error occurred
