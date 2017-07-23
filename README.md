@@ -1,5 +1,4 @@
-WORK IN PROGRESS. This script only changes the bucket permissions.Object permisisons and bucket policies are what need to be addresssed to mitigate data leakage/ downloads. I'm currently working on this. 
-
+WORK IN PROGRESS. This script does not directly identify or protect against risky object acl's. However, the two scripts combined are a good start for preventing data leakage. Further coding is requried if you want to iterate through all obejcts and remove or change object acl's. 
 
 # S3 Public READ Audit and Incident Response 
 
