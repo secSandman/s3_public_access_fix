@@ -22,6 +22,17 @@ I left the code with my inline comments to help folks understand
 
 I also left some example console.logs in the code to illustrate where you could log out to /var/logs/messages etc. and forward on with aws logs agent. These logs could be used for audit and legal purposes if a security incident arises. Currently the user action cannot be logged. This needs to be picked up another using aws logs mechanisms.
 
+# Files
+
+bucket-policy-aclv1.js
+
+This script checks whether bucket policy exist and checks whether wildcards permissions exist. If they do then the script removes all access and wonership and requires root to correct. This can be modified. Currently the policy language is hard coded. Username (owner)is dynamic and will need to be set as a variable and then included in the arn string in the policy statement.
+
+S3-ACL-NODE
+
+This script looks for bucket ACL's. It does not look for objects set to public. This scripts protects against people viewing what's in your bucket. To prevent object acl that could result in data leakage you would need to iterate through all objects or apply a bucket policy and explictly deny and overide the object acl. 
+
+
 
 # Disclaimer
 
